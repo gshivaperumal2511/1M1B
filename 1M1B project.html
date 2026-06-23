@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Plant Disease Detection</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            text-align: center;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        img {
+            width: 250px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: darkred;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌱 AI Plant Disease Detection</h1>
+
+    <p>Upload Plant Leaf Image</p>
+
+    <input type="file" id="imageInput" accept="image/*">
+
+    <br>
+
+    <img id="preview" src="" alt="Leaf Image">
+
+    <br>
+
+    <button onclick="detectDisease()">Detect Disease</button>
+
+    <div id="result"></div>
+
+</div>
+
+
+<script>
+
+    // Display uploaded image
+    document.getElementById("imageInput").onchange = function(event){
+
+        let image = document.getElementById("preview");
+
+        image.src = URL.createObjectURL(event.target.files[0]);
+
+    }
+
+
+    // Sample AI Detection
+    function detectDisease(){
+
+        let result = document.getElementById("result");
+
+        result.innerHTML = 
+        "🔍 Analyzing Image...";
+
+        setTimeout(function(){
+
+            result.innerHTML =
+            "Disease Detected: Leaf Blight <br><br>" +
+            "Treatment: Use suitable pesticide and improve plant care.";
+
+        },2000);
+
+    }
+
+</script>
+
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>AI Plant Disease Detection</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            text-align: center;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        img {
+            width: 250px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: darkred;
+        }
+
+    </style>
+</head>
+
+</body>
+</html>
